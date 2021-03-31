@@ -68,17 +68,3 @@ const computeResult = () => {
     getElem("result").textContent = errorMsg;
   }
 };
-
-// Interact with keyboard event
-const getKeyboardkey = () => {
-  document.addEventListener("keydown", (evt) => {
-    if (evt.repeat) {
-      console.log("Yes repeated");
-    } else {
-      const key = evt.key;
-      displayVal(key, false);
-    }
-  });
-};
-
-getKeyboardkey();
