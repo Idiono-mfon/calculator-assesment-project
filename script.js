@@ -3,8 +3,8 @@ const getElem = (id) => document.getElementById(id);
 let errorMsg = "Syntax Error";
 
 // Get specific operator base on string data
-const outputOperator = (elem) => {
-  const data = elem.id;
+const outputOperator = (elem, domElem) => {
+  const data = domElem ? elem.id : elem;
   switch (data) {
     case "div":
       return " / ";
@@ -47,8 +47,8 @@ const getCurrentScreenData = () => getElem("exp-input").textContent;
 const getCurrentResult = () => getElem("result").textContent;
 
 // Display result
-const displayVal = (val) => {
-  const data = outputOperator(val);
+const displayVal = (val, domElem = true) => {
+  const data = outputOperator(val, domElem);
   const prevExp = getCurrentScreenData();
   const prevResult = getCurrentResult();
   clearExpr();
@@ -68,3 +68,17 @@ const computeResult = () => {
     getElem("result").textContent = errorMsg;
   }
 };
+
+// Interact with keyboard event
+const getKeyboardkey = () => {
+  document.addEventListener("keydown", (evt) => {
+    if (evt.repeat) {
+      console.log("Yes repeated");
+    } else {
+      const key = evt.key;
+      displayVal(key, false);
+    }
+  });
+};
+
+getKeyboardkey();
