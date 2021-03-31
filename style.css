@@ -1,0 +1,117 @@
+/* helper classes */
+.br-none {
+  border-right: none !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  background: #dde3e6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2rem 3rem 5rem rgba(50%, 50%, 50%, 0.2);
+  overflow: hidden;
+  border: none;
+  border-radius: 10px;
+}
+
+.container .calc-screen {
+  background: #738b9b;
+  color: #fff;
+  padding: 0 2rem 0 2rem;
+  height: 18rem;
+}
+
+.calc-screen .screen-col {
+  margin: 10rem 0 0rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.screen-col #exp-input {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-right: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.screen-col #result {
+  font-weight: 600;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.container .calc-body {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+}
+
+.calc-body .row {
+  display: flex;
+}
+
+.calc-body .item {
+  width: 10rem;
+  background: rgba(255, 255, 255, 0.911);
+  border-top: 0.1rem solid #edf1f3;
+  border-right: 0.1rem solid #edf1f3;
+  padding: 2rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calc-body .sign {
+  background: #dde3e6;
+  font-size: 2.5rem;
+  border-right: 0.1rem solid #edf1f3;
+}
+
+.calc-body .sign:hover,
+.calc-body .item:hover {
+  background: #738b9b86;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+.calc-body .row #group {
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-body .row:last-child #equal {
+  flex-grow: 2;
+  background: rgba(255, 0, 0, 0.7);
+  color: #fff;
+  border: 2.5rem groove transparent;
+}
+
+.calc-body .row:last-child #equal:hover {
+  background: rgba(255, 0, 0, 0.837);
+}

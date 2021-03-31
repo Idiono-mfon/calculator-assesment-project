@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator -- Assesment Work</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calc-screen">
+        <div class="screen-col">
+          <div id="exp-input"></div>
+          <div id="result"></div>
+        </div>
+      </div>
+      <div class="calc-body">
+        <div class="row">
+          <div onclick="clearScreen()" id="cancel" class="sign item">CE</div>
+          <div onclick="clearOnce()" id="back" class="sign item">
+            <i class="fas fa-backspace"></i>
+          </div>
+          <div onclick="displayVal(getElem('div'))" id="div" class="sign item">
+            <i class="fas fa-divide"></i>
+          </div>
+          <div
+            onclick="displayVal(getElem('plus'))"
+            id="plus"
+            class="br-none sign item"
+          >
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div onclick="displayVal(getElem('7'))" id="7" class="item">7</div>
+          <div onclick="displayVal(getElem('8'))" id="8" class="item">8</div>
+          <div onclick="displayVal(getElem('9'))" id="9" class="item">9</div>
+          <div
+            onclick="displayVal(getElem('mul'))"
+            id="mul"
+            class="br-none sign item"
+          >
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div onclick="displayVal(getElem('4'))" id="4" class="item">4</div>
+          <div onclick="displayVal(getElem('5'))" id="5" class="item">5</div>
+          <div onclick="displayVal(getElem('6'))" id="6" class="item">6</div>
+          <div
+            onclick="displayVal(getElem('minus'))"
+            id="minus"
+            class="br-none sign item"
+          >
+            <i class="fas fa-minus"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div onclick="displayVal(getElem('1'))" id="1" class="item">1</div>
+          <div onclick="displayVal(getElem('2'))" id="2" class="item">2</div>
+          <div onclick="displayVal(getElem('3'))" id="3" class="item">3</div>
+          <div
+            onclick="displayVal(getElem('pow'))"
+            id="pow"
+            class="br-none sign item"
+          >
+            <strong>X</strong> <sup>^</sup>y
+            <!-- <div id="group">
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-minus"></i>
+            </div> -->
+          </div>
+        </div>
+        <div class="row">
+          <div onclick="displayVal(getElem('0'))" id="0" class="item">0</div>
+          <div onclick="displayVal(getElem('dot'))" id="dot" class="item">
+            .
+          </div>
+          <div onclick="computeResult()" id="equal" class="sign item">
+            <i class="fas fa-equals"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
